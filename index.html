@@ -803,7 +803,7 @@
         </div>
         <div class="hero-image">
             <!-- Lägg din Stockholm-bild här! Ersätt src med sökvägen till din bild -->
-            <img src="drone-front.jpeg" alt="Flygvy över Stockholm" style="display: block;" id="hero-img">
+            <img src="hero-dimhav.jpg" alt="Soluppgång över dimhavet på Södermalm med Sofia kyrka, fotograferat med drönare" style="display: block;" id="hero-img">
             <div class="hero-image-placeholder" id="placeholder">
                 <div class="serif">Flygvy över Stockholm</div>
             </div>
@@ -1119,6 +1119,11 @@
             img.style.display = 'none';
             placeholder.style.display = 'block';
         };
+
+        // The image may already be loaded before the handlers above are attached
+        if (img.complete && img.naturalWidth > 0) {
+            placeholder.style.display = 'none';
+        }
         
         // Try to load the image
      
