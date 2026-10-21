@@ -591,6 +591,116 @@
             margin-bottom: 1rem;
         }
 
+        /* Portfolio */
+        .portfolio-section {
+            background: var(--white);
+        }
+
+        .portfolio-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            columns: 3 300px;
+            column-gap: 1.25rem;
+        }
+
+        .portfolio-item {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+            background: var(--black);
+            cursor: zoom-in;
+            break-inside: avoid;
+            margin: 0 0 1.25rem;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s ease, opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.04);
+            opacity: 0.9;
+        }
+
+        .portfolio-item .portfolio-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 2rem 1.25rem 1rem;
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.7), transparent);
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-caption,
+        .portfolio-item:focus-visible .portfolio-caption {
+            opacity: 1;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 10, 10, 0.95);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 4rem 1rem;
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .lightbox button {
+            position: absolute;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            opacity: 0.8;
+        }
+
+        .lightbox button:hover {
+            opacity: 1;
+        }
+
+        .lightbox-close { top: 1rem; right: 1rem; }
+        .lightbox-prev { left: 0.5rem; top: 50%; transform: translateY(-50%); }
+        .lightbox-next { right: 0.5rem; top: 50%; transform: translateY(-50%); }
+
+        .lightbox-full {
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .lightbox-full:hover {
+            color: var(--white);
+        }
+
         /* Responsive */
         @media (max-width: 968px) {
             .hero {
@@ -661,6 +771,7 @@
             <div class="logo">Vidvy Studio</div>
             <ul class="nav-links">
                 <li><a href="#tjanster">Tjänster</a></li>
+                <li><a href="#arbeten">Arbeten</a></li>
                 <li><a href="#brollop">Bröllop</a></li>
                 <li><a href="#om">Om</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
@@ -741,6 +852,57 @@
                     <li>Verksam i hela Mälardalen</li>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <section id="arbeten" class="portfolio-section">
+        <div class="section-header fade-in">
+            <div class="section-eyebrow">Tidigare arbeten</div>
+            <h2 class="section-title">Stockholm från ovan</h2>
+            <p class="section-description">Ett urval av bilder vi har tagit. Klicka på en bild för att se den i full upplösning.</p>
+        </div>
+
+        <div class="portfolio-grid">
+            <!--
+              Ny bild: lägg 4K-versionen som galleri-NAMN.jpg och en mindre webbversion som galleri-NAMN-liten.jpg
+              i samma mapp som index.html, och kopiera ett av blocken nedan.
+            -->
+            <a class="portfolio-item" href="galleri-dimhav-soluppgang.jpg">
+                <img src="galleri-dimhav-soluppgang-liten.jpg" alt="Soluppgång över dimhavet på Södermalm, med Sofia kyrka till höger" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Dimhav över Södermalm</span>
+            </a>
+            <a class="portfolio-item" href="galleri-hostljus-djurgarden.jpg">
+                <img src="galleri-hostljus-djurgarden-liten.jpg" alt="Röd byggnad i höstljus med utsikt över vattnet mot Gröna Lund" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Höstljus mot Gröna Lund</span>
+            </a>
+            <a class="portfolio-item" href="galleri-morgondimma-vattnet.jpg">
+                <img src="galleri-morgondimma-vattnet-liten.jpg" alt="Morgondimma över vattnet och ett kryssningsfartyg vid kajen" loading="lazy" width="900" height="1200">
+                <span class="portfolio-caption">Morgondimma över vattnet</span>
+            </a>
+            <a class="portfolio-item" href="galleri-tegelhus-hostljus.jpg">
+                <img src="galleri-tegelhus-hostljus-liten.jpg" alt="Tegelbyggnad med rött tak och kopparkupol i höstljus, med vattnet i bakgrunden" loading="lazy" width="900" height="1200">
+                <span class="portfolio-caption">Tegel och koppar</span>
+            </a>
+            <a class="portfolio-item" href="galleri-dimhav-sofia-kyrka.jpg">
+                <img src="galleri-dimhav-sofia-kyrka-liten.jpg" alt="Sofia kyrka och kvarter på Södermalm med dimma och soluppgång i bakgrunden" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Sofia kyrka i morgondimma</span>
+            </a>
+            <a class="portfolio-item" href="galleri-trad-ovanifran.jpg">
+                <img src="galleri-trad-ovanifran-liten.jpg" alt="Orange höstträd fotograferat rakt ovanifrån bredvid ett rött tegeltak" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Hösten ovanifrån</span>
+            </a>
+            <a class="portfolio-item" href="galleri-sofia-kyrka-globen.jpg">
+                <img src="galleri-sofia-kyrka-globen-liten.jpg" alt="Klar morgon över Södermalm med Sofia kyrka och Globen i bakgrunden" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Klar morgon över Söder</span>
+            </a>
+            <a class="portfolio-item" href="galleri-soluppgang-tak.jpg">
+                <img src="galleri-soluppgang-tak-liten.jpg" alt="Soluppgång över dimman sedd över tegeltak och en kopparkupol" loading="lazy" width="900" height="1200">
+                <span class="portfolio-caption">Soluppgång över taken</span>
+            </a>
+            <a class="portfolio-item" href="galleri-tegelhus-gamla-stan.jpg">
+                <img src="galleri-tegelhus-gamla-stan-liten.jpg" alt="Tegelbyggnad med rött tak och utsikt över vattnet mot Gamla stan" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Utsikt mot Gamla stan</span>
+            </a>
         </div>
     </section>
 
@@ -873,7 +1035,59 @@
         <p>© 2025 Vidvy Studio — 3D & Drönare i Stockholm</p>
     </footer>
 
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildvisning">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Stäng">×</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Föregående bild">‹</button>
+        <img id="lightbox-img" alt="">
+        <button class="lightbox-next" id="lightbox-next" aria-label="Nästa bild">›</button>
+        <a class="lightbox-full" id="lightbox-full" href="#" target="_blank" rel="noopener">Öppna i full storlek</a>
+    </div>
+
     <script>
+        // Portfolio lightbox
+        (function () {
+            const items = Array.from(document.querySelectorAll('.portfolio-item'));
+            const box = document.getElementById('lightbox');
+            const boxImg = document.getElementById('lightbox-img');
+            const fullLink = document.getElementById('lightbox-full');
+            let current = 0;
+
+            function show(i) {
+                current = (i + items.length) % items.length;
+                const item = items[current];
+                const thumb = item.querySelector('img');
+                boxImg.src = item.getAttribute('href');
+                boxImg.alt = thumb ? thumb.alt : '';
+                fullLink.href = item.getAttribute('href');
+                box.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function close() {
+                box.classList.remove('open');
+                boxImg.removeAttribute('src');
+                document.body.style.overflow = '';
+            }
+
+            items.forEach((item, i) => {
+                item.addEventListener('click', e => {
+                    e.preventDefault();
+                    show(i);
+                });
+            });
+
+            document.getElementById('lightbox-close').addEventListener('click', close);
+            document.getElementById('lightbox-prev').addEventListener('click', () => show(current - 1));
+            document.getElementById('lightbox-next').addEventListener('click', () => show(current + 1));
+            box.addEventListener('click', e => { if (e.target === box) close(); });
+            document.addEventListener('keydown', e => {
+                if (!box.classList.contains('open')) return;
+                if (e.key === 'Escape') close();
+                if (e.key === 'ArrowLeft') show(current - 1);
+                if (e.key === 'ArrowRight') show(current + 1);
+            });
+        })();
+
         // Scroll animations
         const observerOptions = {
             threshold: 0.1,
