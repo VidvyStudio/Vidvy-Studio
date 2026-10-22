@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vidvy Studio — 3D & Drönare i Stockholm</title>
+    <title>Billig drönarfilm i Stockholm | Vidvy Studio</title>
+    <meta name="description" content="Prisvärd drönarfilm och flygfoto i Stockholm. Drönarfilm från 2 000 kr, flygfoto från 1 000 kr och videoredigering för 200 kr i timmen. Hör av dig för pris på ditt projekt.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Vidvy Studio",
+        "description": "Prisvärd drönarfilm, flygfoto och videoredigering i Stockholm.",
+        "url": "https://vidvystudio.github.io/Vidvy-Studio/",
+        "image": "https://vidvystudio.github.io/Vidvy-Studio/hero-dimhav.jpg",
+        "email": "vidvystudio@gmail.com",
+        "areaServed": "Stockholm",
+        "priceRange": "Från 200 kr"
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -591,6 +605,85 @@
             margin-bottom: 1rem;
         }
 
+        /* Hero price link */
+        .hero-price {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            align-self: flex-start;
+            background: var(--white);
+            color: var(--green);
+            padding: 0.9rem 1.5rem;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.5s forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-price span {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--green-light);
+        }
+
+        .hero-price:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Pricing */
+        .pricing-section {
+            background: var(--accent);
+        }
+
+        .pricing-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .price-card {
+            background: var(--white);
+            border: 2px solid var(--green);
+            border-radius: 2px;
+            padding: 2.5rem 2rem;
+            position: relative;
+        }
+
+
+
+        .price-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .price {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--green);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .price .from {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--gray-light);
+            letter-spacing: 0;
+        }
+
+        .price-card p {
+            color: var(--gray-light);
+            line-height: 1.7;
+        }
+
         /* Portfolio */
         .portfolio-section {
             background: var(--white);
@@ -771,6 +864,7 @@
             <div class="logo">Vidvy Studio</div>
             <ul class="nav-links">
                 <li><a href="#tjanster">Tjänster</a></li>
+                <li><a href="#priser">Priser</a></li>
                 <li><a href="#arbeten">Arbeten</a></li>
                 <li><a href="#brollop">Bröllop</a></li>
                 <li><a href="#om">Om</a></li>
@@ -781,11 +875,12 @@
 
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-eyebrow">Stockholm</div>
+            <div class="hero-eyebrow">Prisvärd drönarfilm i Stockholm</div>
             <h1>Kreativ produktion<br>från nya perspektiv</h1>
             <p class="hero-description">
-                Vi kombinerar 3D-utskrift och professionell drönarvideografi för att skapa unika upplevelser och minnen.
+                Drönarfilm, flygfoto och videoredigering för företag och organisationer – till priser som passar även en liten budget.
             </p>
+            <a href="#priser" class="hero-price">Drönarfilm från 2 000 kr <span>→ Se priser</span></a>
             <div class="hero-services">
                 <div class="hero-service-item">
                     <div class="hero-service-icon"></div>
@@ -851,6 +946,32 @@
                     <li>Marknadsföringsmaterial</li>
                     <li>Verksam i hela Mälardalen</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="priser" class="pricing-section">
+        <div class="section-header fade-in">
+            <div class="section-eyebrow">Priser</div>
+            <h2 class="section-title">Drönarfilm och flygfoto till låga priser</h2>
+            <p class="section-description">Professionella flygbilder behöver inte kosta skjortan. Här är våra ungefärliga priser – hör av dig så får du ett exakt pris för just ditt projekt.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="price-card fade-in">
+                <h3>Flygfoto</h3>
+                <div class="price"><span class="from">från</span> 1 000 kr</div>
+                <p>Fem redigerade bilder från luften av din lokal, fastighet eller ditt område.</p>
+            </div>
+            <div class="price-card fade-in">
+                <h3>Drönarfilm</h3>
+                <div class="price"><span class="from">från</span> 2 000 kr</div>
+                <p>En kort film i 4K, färdigklippt med musik – redo för hemsidan och sociala medier. Längre filmer kostar mer beroende på hur mycket redigering som behövs.</p>
+            </div>
+            <div class="price-card fade-in">
+                <h3>Videoredigering</h3>
+                <div class="price">200 kr <span class="from">/ timme</span></div>
+                <p>Klippning, färgkorrigering och musik. Gäller både material du redan har filmat och längre drönarfilmer, där redigeringen räknas in i priset.</p>
             </div>
         </div>
     </section>
