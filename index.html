@@ -361,64 +361,6 @@
             font-weight: 700;
         }
 
-        /* Wedding Section */
-        .wedding-section {
-            background: var(--accent);
-            position: relative;
-        }
-
-        .wedding-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-        }
-
-        .wedding-image-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .wedding-img {
-            aspect-ratio: 4/5;
-            background: var(--green);
-            border-radius: 2px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .wedding-img::after {
-            display:	none;        
-        }
-
-        .wedding-img:nth-child(2) {
-            transform: translateY(3rem);
-        }
-
-        .wedding-details h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--green);
-            font-weight: 700;
-        }
-
-        .wedding-details p {
-            font-size: 1.1rem;
-            color: var(--gray);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .wedding-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
         .stat {
             border-left: 3px solid var(--green);
             padding-left: 1.5rem;
@@ -808,15 +750,6 @@
                 min-height: 400px;
             }
 
-            .wedding-content {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-
-            .wedding-image-grid {
-                order: 2;
-            }
-
             .nav-links {
                 display: none;
             }
@@ -834,14 +767,6 @@
             .process-steps {
                 grid-template-columns: 1fr;
                 gap: 3rem;
-            }
-
-            .wedding-image-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .wedding-img:nth-child(2) {
-                transform: none;
             }
         }
 
@@ -866,7 +791,6 @@
                 <li><a href="#tjanster">Tjänster</a></li>
                 <li><a href="#priser">Priser</a></li>
                 <li><a href="#arbeten">Arbeten</a></li>
-                <li><a href="#brollop">Bröllop</a></li>
                 <li><a href="#om">Om</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
@@ -884,15 +808,15 @@
             <div class="hero-services">
                 <div class="hero-service-item">
                     <div class="hero-service-icon"></div>
-                    <div class="hero-service-text">Personliga 3D-dekorationer</div>
+                    <div class="hero-service-text">Drönarfilm</div>
                 </div>
                 <div class="hero-service-item">
                     <div class="hero-service-icon"></div>
-                    <div class="hero-service-text">Bröllopsdrönare</div>
+                    <div class="hero-service-text">Flygfoto</div>
                 </div>
                 <div class="hero-service-item">
                     <div class="hero-service-icon"></div>
-                    <div class="hero-service-text">Företagsvideografi</div>
+                    <div class="hero-service-text">Videoredigering</div>
                 </div>
             </div>
         </div>
@@ -908,43 +832,42 @@
     <section id="tjanster">
         <div class="section-header fade-in">
             <div class="section-eyebrow">Vad vi gör</div>
-            <h2 class="section-title">Tjänster för särskilda tillfällen och professionella behov</h2>
+            <h2 class="section-title">Drönarfilm och flygfoto för företag, fastigheter och event</h2>
         </div>
         
         <div class="services-grid">
             <div class="service-card fade-in">
                 <div class="service-icon">✦</div>
-                <h3>3D-utskrivna<br>bordsdekorationer</h3>
-                <p>Skräddarsydda namnskyltar och bordsplaceringar i olika material och typsnitt — perfekt för bröllop och event.</p>
+                <h3>Företag &<br>marknadsföring</h3>
+                <p>Film och bilder från luften till hemsidan, sociala medier och reklam – som visar er verksamhet från en ny vinkel.</p>
                 <ul class="service-features">
-                    <li>Personliga namnskyltar</li>
-                    <li>Nyckelringar som minnesgåvor</li>
-                    <li>Olika material och färger</li>
-                    <li>Snabb leverans i Stockholm</li>
-                </ul>
-            </div>
-
-            <div class="service-card fade-in">
-                <div class="service-icon">♡</div>
-                <h3>Bröllops-<br>drönare</h3>
-                <p>Fånga bröllopsdagen och platsen från luften — vackra vyer och cineastiska klipp som kompletterar er berättelse.</p>
-                <ul class="service-features">
-                    <li>DJI Mini 5 Pro (4K HDR)</li>
-                    <li>Filmar venue före eller under</li>
-                    <li>Redigerade klipp levereras</li>
-                    <li>EASA-certifierad operatör</li>
+                    <li>Reklamfilmer för sociala medier</li>
+                    <li>Bilder till hemsida och trycksaker</li>
+                    <li>Färdigklippt med musik</li>
+                    <li>Verksam i hela Mälardalen</li>
                 </ul>
             </div>
 
             <div class="service-card fade-in">
                 <div class="service-icon">🏠︎</div>
-                <h3>Företags & fastighets-<br>videografi</h3>
-                <p>Professionella luftbilder för mäklare, företag och marknadsföring — visar platser och fastigheter i sitt bästa ljus.</p>
+                <h3>Fastigheter &<br>mäklare</h3>
+                <p>Flygfoto och film som visar fastigheten, tomten och omgivningen i sitt bästa ljus.</p>
                 <ul class="service-features">
-                    <li>Fastighetsmäklare</li>
-                    <li>Företagsdokumentation</li>
-                    <li>Marknadsföringsmaterial</li>
-                    <li>Verksam i hela Mälardalen</li>
+                    <li>Flygfoto av hus och tomt</li>
+                    <li>Kort film till annonsen</li>
+                    <li>Visar läge och närområde</li>
+                    <li>DJI Mini 5 Pro (4K HDR)</li>
+                </ul>
+            </div>
+
+            <div class="service-card fade-in">
+                <div class="service-icon">♡</div>
+                <h3>Event &<br>bröllop</h3>
+                <p>Fånga platsen och dagen från luften – vackra vyer och filmiska klipp som kompletterar resten av filmen.</p>
+                <ul class="service-features">
+                    <li>Filmar platsen före eller under</li>
+                    <li>Redigerade klipp levereras</li>
+                    <li>EASA-certifierad operatör</li>
                 </ul>
             </div>
         </div>
@@ -1027,44 +950,6 @@
         </div>
     </section>
 
-    <section id="brollop" class="wedding-section">
-        <div class="wedding-content">
-            <div class="wedding-image-grid">
-                <div class="wedding-img"><img src="namnskylt.jpeg" alt="3D-utskrivna namnskyltar" style="width:100%;height:100%;object-fit:cover;">
-                </div>
-                <div class="wedding-img">
-                		<img src="sunset.jpeg" alt="Bröllopsvenue från luften" style="width:100%;height:100%;object-fit:cover;">
-            </div>
-            <div class="wedding-img">
-                		<img src="namnskyltar.jpeg" alt="Namnskyltar" style="width:100%;height:100%;object-fit:cover;">
-            </div>
-
-            <div class="wedding-details">
-                <div class="section-eyebrow">Specialisering</div>
-                <h3>Kompletta bröllopspaket</h3>
-                <p>
-                    Vi erbjuder allt från personliga bordsplaceringar till professionell drönarvideografi av bröllopsdagen. 
-                    Med hög kvalitet och personlig service hjälper vi er att skapa minnen som varar.
-                </p>
-                <p>
-                    Namnskyltar kan även göras om till nyckelringar som era gäster får ta med sig hem — 
-                    ett roligt och unikt minne från er stora dag.
-                </p>
-                
-                <div class="wedding-stats">
-                    <div class="stat">
-                        <div class="stat-number">5 dagar</div>
-                        <div class="stat-label">Leveranstid inom Stockholm</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">4K</div>
-                        <div class="stat-label">HDR videokvalitet</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="process-section">
         <div class="section-header fade-in">
             <div class="section-eyebrow" style="color: var(--green-bright);">Processen</div>
@@ -1080,20 +965,20 @@
 
             <div class="process-step fade-in">
                 <div class="step-number">02</div>
-                <h4>Design & godkännande</h4>
-                <p>För 3D-utskrifter skickar vi designförslag. För drönare planerar vi filmning och platser tillsammans med er.</p>
+                <h4>Planering</h4>
+                <p>Vi planerar filmningen, platserna och vad filmen ska visa tillsammans med dig.</p>
             </div>
 
             <div class="process-step fade-in">
                 <div class="step-number">03</div>
                 <h4>Produktion</h4>
-                <p>Vi skriver ut era dekorationer eller filmar med professionell utrustning. Allt hanteras med omsorg och precision.</p>
+                <p>Vi filmar och fotograferar från luften i 4K. Allt hanteras med omsorg och precision.</p>
             </div>
 
             <div class="process-step fade-in">
                 <div class="step-number">04</div>
                 <h4>Leverans</h4>
-                <p>Utskrifter levereras inom 5 dagar i Stockholm. Videomaterial redigeras och levereras inom en vecka.</p>
+                <p>Materialet redigeras och levereras inom en vecka.</p>
             </div>
         </div>
     </section>
@@ -1103,14 +988,14 @@
             <div class="section-eyebrow">Om Vidvy Studio</div>
             <h2 class="section-title">Kreativitet möter teknik</h2>
             <p class="about-intro">
-                Baserat på Södermalm i Stockholm kombinerar vi passion för teknik och design. 
-                Med professionell utrustning och personlig service skapar vi unika lösningar för bröllop, event och företag.
+                Baserat på Södermalm i Stockholm filmar och fotograferar vi med drönare. 
+                Med professionell utrustning och personlig service tar vi fram film och bilder för företag, fastigheter och event.
             </p>
 
             <div class="about-details">
                 <div class="about-detail">
                     <h4>Utrustning</h4>
-                    <p>Bambu Lab A1 Mini 3D-skrivare och DJI Mini 5 Pro drönare med 4K HDR-inspelning.</p>
+                    <p>DJI Mini 5 Pro drönare med 4K HDR-inspelning.</p>
                 </div>
                 <div class="about-detail">
                     <h4>Plats</h4>
@@ -1153,7 +1038,7 @@
 
     <footer>
         <div class="logo">Vidvy Studio</div>
-        <p>© 2026 Vidvy Studio — 3D & Drönare i Stockholm</p>
+        <p>© 2026 Vidvy Studio — Drönarfilm & flygfoto i Stockholm</p>
     </footer>
 
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildvisning">
