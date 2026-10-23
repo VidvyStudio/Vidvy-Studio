@@ -717,6 +717,38 @@
             column-gap: 1.25rem;
         }
 
+        .portfolio-item.is-hidden {
+            display: none;
+        }
+
+        .portfolio-more {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        .portfolio-more button {
+            font: inherit;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--white);
+            background: var(--green);
+            border: none;
+            border-radius: 2px;
+            padding: 0.95rem 1.75rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-more button span {
+            font-weight: 500;
+            opacity: 0.75;
+        }
+
+        .portfolio-more button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
         .portfolio-item {
             display: block;
             position: relative;
@@ -982,51 +1014,238 @@
     <section id="arbeten" class="portfolio-section">
         <div class="section-header fade-in">
             <div class="section-eyebrow">Tidigare arbeten</div>
-            <h2 class="section-title">Stockholm från ovan</h2>
-            <p class="section-description">Ett urval av bilder vi har tagit. Klicka på en bild för att se den i full upplösning.</p>
+            <h2 class="section-title">Från ovan</h2>
+            <p class="section-description">Ett urval av bilder vi har tagit – i stan, i skärgården och på landet. Klicka på en bild för att se den i full upplösning.</p>
         </div>
 
         <div class="portfolio-grid">
             <!--
               Ny bild: lägg 4K-versionen som galleri-NAMN.jpg och en mindre webbversion som galleri-NAMN-liten.jpg
-              i samma mapp som index.html, och kopiera ett av blocken nedan.
+              i samma mapp som index.html, och kopiera ett av blocken nedan. De första 12 visas direkt, resten under "Visa fler bilder".
             -->
             <a class="portfolio-item" href="galleri-dimhav-soluppgang.jpg">
                 <img src="galleri-dimhav-soluppgang-liten.jpg" alt="Soluppgång över dimhavet på Södermalm, med Sofia kyrka till höger" loading="lazy" width="1200" height="900">
                 <span class="portfolio-caption">Dimhav över Södermalm</span>
             </a>
+            <a class="portfolio-item" href="galleri-klippa-vid-vattnet.jpg">
+                <img src="galleri-klippa-vid-vattnet-liten.jpg" alt="Brant klippa med tallar vid en stilla sjö i kvällssol" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Klippan vid vattnet</span>
+            </a>
+            <a class="portfolio-item" href="galleri-roda-hus-kvallsljus.jpg">
+                <img src="galleri-roda-hus-kvallsljus-liten.jpg" alt="Röda trähus i en skogsglänta i kvällssol" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Röda hus i kvällsljus</span>
+            </a>
+            <a class="portfolio-item" href="galleri-skargardsbat.jpg">
+                <img src="galleri-skargardsbat-liten.jpg" alt="Skärgårdsbåt lämnar kölvatten förbi en fästningsmur" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Skärgårdsbåt</span>
+            </a>
             <a class="portfolio-item" href="galleri-hostljus-djurgarden.jpg">
                 <img src="galleri-hostljus-djurgarden-liten.jpg" alt="Röd byggnad i höstljus med utsikt över vattnet mot Gröna Lund" loading="lazy" width="1200" height="900">
                 <span class="portfolio-caption">Höstljus mot Gröna Lund</span>
             </a>
-            <a class="portfolio-item" href="galleri-morgondimma-vattnet.jpg">
-                <img src="galleri-morgondimma-vattnet-liten.jpg" alt="Morgondimma över vattnet och ett kryssningsfartyg vid kajen" loading="lazy" width="900" height="1200">
-                <span class="portfolio-caption">Morgondimma över vattnet</span>
+            <a class="portfolio-item" href="galleri-a-genom-hostskogen.jpg">
+                <img src="galleri-a-genom-hostskogen-liten.jpg" alt="Å genom skog i höstfärger, rakt ovanifrån" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Å genom höstskogen</span>
+            </a>
+            <a class="portfolio-item" href="galleri-holme-i-skargarden.jpg">
+                <img src="galleri-holme-i-skargarden-liten.jpg" alt="Liten holme med träd och klippor i skärgården" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Holme i skärgården</span>
             </a>
             <a class="portfolio-item" href="galleri-tegelhus-hostljus.jpg">
                 <img src="galleri-tegelhus-hostljus-liten.jpg" alt="Tegelbyggnad med rött tak och kopparkupol i höstljus, med vattnet i bakgrunden" loading="lazy" width="900" height="1200">
                 <span class="portfolio-caption">Tegel och koppar</span>
             </a>
-            <a class="portfolio-item" href="galleri-dimhav-sofia-kyrka.jpg">
+            <a class="portfolio-item" href="galleri-tvillingtornen-soder.jpg">
+                <img src="galleri-tvillingtornen-soder-liten.jpg" alt="Kyrka med två torn och stadskvarter en klar vårdag, fotograferad med drönare" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Tvillingtornen på Söder</span>
+            </a>
+            <a class="portfolio-item" href="galleri-oar-i-kvallsljus.jpg">
+                <img src="galleri-oar-i-kvallsljus-liten.jpg" alt="Skogsklädda öar lysta av kvällssol" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Öar i kvällsljus</span>
+            </a>
+            <a class="portfolio-item" href="galleri-himmel-over-akern.jpg">
+                <img src="galleri-himmel-over-akern-liten.jpg" alt="Dramatiska rosa moln över en åker i solnedgången" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Himmel över åkern</span>
+            </a>
+            <a class="portfolio-item" href="galleri-kvallsskugga-pa-akern.jpg">
+                <img src="galleri-kvallsskugga-pa-akern-liten.jpg" alt="Ensilagebal med lång kvällsskugga på en grön åker, rakt ovanifrån" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Kvällsskugga på åkern</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-morgondimma-vattnet.jpg">
+                <img src="galleri-morgondimma-vattnet-liten.jpg" alt="Morgondimma över vattnet och ett kryssningsfartyg vid kajen" loading="lazy" width="900" height="1200">
+                <span class="portfolio-caption">Morgondimma över vattnet</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-villa-pa-berget.jpg">
+                <img src="galleri-villa-pa-berget-liten.jpg" alt="Villa i flera plan på en bergssluttning, fotograferad med drönare" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Villa på berget</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-dimhav-sofia-kyrka.jpg">
                 <img src="galleri-dimhav-sofia-kyrka-liten.jpg" alt="Sofia kyrka och kvarter på Södermalm med dimma och soluppgång i bakgrunden" loading="lazy" width="1200" height="900">
                 <span class="portfolio-caption">Sofia kyrka i morgondimma</span>
             </a>
-            <a class="portfolio-item" href="galleri-trad-ovanifran.jpg">
+            <a class="portfolio-item is-hidden" href="galleri-trad-ovanifran.jpg">
                 <img src="galleri-trad-ovanifran-liten.jpg" alt="Orange höstträd fotograferat rakt ovanifrån bredvid ett rött tegeltak" loading="lazy" width="1200" height="900">
                 <span class="portfolio-caption">Hösten ovanifrån</span>
             </a>
-            <a class="portfolio-item" href="galleri-sofia-kyrka-globen.jpg">
+            <a class="portfolio-item is-hidden" href="galleri-skargardsbat-ovanifran.jpg">
+                <img src="galleri-skargardsbat-ovanifran-liten.jpg" alt="Skärgårdsbåt med passagerare på däck, sedd rakt ovanifrån" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Skärgårdsbåt rakt ovanifrån</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-skogsudde.jpg">
+                <img src="galleri-skogsudde-liten.jpg" alt="Skogsklädd udde och klipphäll vid vattnet" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Skogsudde i vårljus</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-sofia-kyrka-globen.jpg">
                 <img src="galleri-sofia-kyrka-globen-liten.jpg" alt="Klar morgon över Södermalm med Sofia kyrka och Globen i bakgrunden" loading="lazy" width="1200" height="900">
                 <span class="portfolio-caption">Klar morgon över Söder</span>
             </a>
-            <a class="portfolio-item" href="galleri-soluppgang-tak.jpg">
+            <a class="portfolio-item is-hidden" href="galleri-vag-genom-falten.jpg">
+                <img src="galleri-vag-genom-falten-liten.jpg" alt="Landsväg genom vårfält under blå himmel" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Väg genom fälten</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-bryggor-ovanifran.jpg">
+                <img src="galleri-bryggor-ovanifran-liten.jpg" alt="Bryggor och båtar vid strandkanten sedda ovanifrån" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Bryggor ovanifrån</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-soluppgang-tak.jpg">
                 <img src="galleri-soluppgang-tak-liten.jpg" alt="Soluppgång över dimman sedd över tegeltak och en kopparkupol" loading="lazy" width="900" height="1200">
                 <span class="portfolio-caption">Soluppgång över taken</span>
             </a>
-            <a class="portfolio-item" href="galleri-tegelhus-gamla-stan.jpg">
+            <a class="portfolio-item is-hidden" href="galleri-stugor-i-nattljus.jpg">
+                <img src="galleri-stugor-i-nattljus-liten.jpg" alt="Röda stugor upplysta av varmt ljus en mörk kväll, sett ovanifrån" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Stugor i nattljus</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-sundet-fran-ovan.jpg">
+                <img src="galleri-sundet-fran-ovan-liten.jpg" alt="Sund som slingrar sig mellan bebyggda öar" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Sundet från ovan</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-tegelhus-gamla-stan.jpg">
                 <img src="galleri-tegelhus-gamla-stan-liten.jpg" alt="Tegelbyggnad med rött tak och utsikt över vattnet mot Gamla stan" loading="lazy" width="1200" height="900">
                 <span class="portfolio-caption">Utsikt mot Gamla stan</span>
             </a>
+            <a class="portfolio-item is-hidden" href="galleri-solnedgang-over-fjarden.jpg">
+                <img src="galleri-solnedgang-over-fjarden-liten.jpg" alt="Solen går ner över en stilla fjärd" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Solnedgång över fjärden</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-tak-rakt-ovanifran.jpg">
+                <img src="galleri-tak-rakt-ovanifran-liten.jpg" alt="Rött tegeltak och kopparkupol fotograferat rakt ovanifrån" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Tak rakt ovanifrån</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-hoghus-vid-vattnet.jpg">
+                <img src="galleri-hoghus-vid-vattnet-liten.jpg" alt="Höghus som speglar sig i vattnet en klar vårdag" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Höghus vid vattnet</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-bat-i-kvallsljus.jpg">
+                <img src="galleri-bat-i-kvallsljus-liten.jpg" alt="Passagerarbåt på väg ut i skärgården i kvällsljus" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Båt i kvällsljus</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-tallar-i-guldljus.jpg">
+                <img src="galleri-tallar-i-guldljus-liten.jpg" alt="Tallkronor i varmt kvällsljus" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Tallar i guldljus</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-kyrka-rakt-ovanifran.jpg">
+                <img src="galleri-kyrka-rakt-ovanifran-liten.jpg" alt="Kyrkans fasad och entré fotograferad rakt ovanifrån" loading="lazy" width="900" height="1200">
+                <span class="portfolio-caption">Kyrkan rakt ovanifrån</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-skog-till-horisonten.jpg">
+                <img src="galleri-skog-till-horisonten-liten.jpg" alt="Skog och bebyggelse så långt ögat når" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Skog till horisonten</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-boj-rakt-ovanifran.jpg">
+                <img src="galleri-boj-rakt-ovanifran-liten.jpg" alt="Röd boj på mörkt vatten, rakt ovanifrån" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Boj rakt ovanifrån</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-skymning-vid-batplatsen.jpg">
+                <img src="galleri-skymning-vid-batplatsen-liten.jpg" alt="Båtuppläggning och villor vid vattnet i rosa skymningsljus" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Skymning vid båtplatsen</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-tegelhuset-i-vargronska.jpg">
+                <img src="galleri-tegelhuset-i-vargronska-liten.jpg" alt="Tegelbyggnad med rött tak och utsikt över vattnet i vårgrönska" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Tegelhuset i vårgrönska</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-sjo-mulen-dag.jpg">
+                <img src="galleri-sjo-mulen-dag-liten.jpg" alt="Skogsklädd strand och stilla sjö under molnig himmel" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Sjö en mulen dag</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-stad-under-varmoln.jpg">
+                <img src="galleri-stad-under-varmoln-liten.jpg" alt="Stadskvarter och vatten under vita vårmoln, sett från luften" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Stad under vårmoln</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-skargard-i-skymning.jpg">
+                <img src="galleri-skargard-i-skymning-liten.jpg" alt="Skärgårdsöar i skymningsljus" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Skärgård i skymning</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-back-mellan-traden.jpg">
+                <img src="galleri-back-mellan-traden-liten.jpg" alt="Bäck som rinner mellan stora lövträd" loading="lazy" width="900" height="1200">
+                <span class="portfolio-caption">Bäck mellan träden</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-solnedgang-over-stan.jpg">
+                <img src="galleri-solnedgang-over-stan-liten.jpg" alt="Orange solnedgång över stadens silhuett" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Solnedgång över stan</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-motorbat.jpg">
+                <img src="galleri-motorbat-liten.jpg" alt="Motorbåt förtöjd på mörkt, stilla vatten" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Motorbåt på stilla vatten</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-stadskvarter-i-varsol.jpg">
+                <img src="galleri-stadskvarter-i-varsol-liten.jpg" alt="Färgglada stadskvarter med kyrktorn i bakgrunden, fotograferat med drönare" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Stadskvarter i vårsol</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-sund-mellan-husen.jpg">
+                <img src="galleri-sund-mellan-husen-liten.jpg" alt="Smalt sund med båtar och hus på båda sidor" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Sund mellan husen</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-solen-gar-ner-over-skogen.jpg">
+                <img src="galleri-solen-gar-ner-over-skogen-liten.jpg" alt="Solnedgång över skog och bebyggelse" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Solen går ner över skogen</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-tegelhus-i-varsol.jpg">
+                <img src="galleri-tegelhus-i-varsol-liten.jpg" alt="Stor tegelbyggnad med utsikt över stadens tak i vårsol" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Tegelhus i vårsol</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-skymning-vid-oarna.jpg">
+                <img src="galleri-skymning-vid-oarna-liten.jpg" alt="Öar och stilla vatten i blå skymning" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Skymning vid öarna</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-tallar-mot-bla-himmel.jpg">
+                <img src="galleri-tallar-mot-bla-himmel-liten.jpg" alt="Höga tallar mot klarblå himmel" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Tallar mot blå himmel</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-vattnet-genom-stan.jpg">
+                <img src="galleri-vattnet-genom-stan-liten.jpg" alt="Vattendrag mellan stadsdelar med broar i bakgrunden" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Vattnet genom stan</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-skargard-mulen-dag.jpg">
+                <img src="galleri-skargard-mulen-dag-liten.jpg" alt="Skärgårdsvik med hus bland träden under grå himmel" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Skärgård en mulen dag</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-kvallshimmel.jpg">
+                <img src="galleri-kvallshimmel-liten.jpg" alt="Kvällshimmel som går från blått till orange över horisonten" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Kvällshimmel</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-solnedgang-over-skogen.jpg">
+                <img src="galleri-solnedgang-over-skogen-liten.jpg" alt="Solnedgång vid horisonten över mörk skog" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Solnedgång över skogen</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-tegelhus-och-stad.jpg">
+                <img src="galleri-tegelhus-och-stad-liten.jpg" alt="Tegelbyggnad och stadskvarter en solig vårdag" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Tegelhus och stad</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-stilla-vatten-i-skymning.jpg">
+                <img src="galleri-stilla-vatten-i-skymning-liten.jpg" alt="Spegelblankt vatten och skogsklädda stränder i skymningen" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Stilla vatten i skymning</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-solnedgang-over-villorna.jpg">
+                <img src="galleri-solnedgang-over-villorna-liten.jpg" alt="Villaområde i solnedgång sett från luften" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Solnedgång över villorna</span>
+            </a>
+            <a class="portfolio-item is-hidden" href="galleri-skog-och-hav.jpg">
+                <img src="galleri-skog-och-hav-liten.jpg" alt="Tallskog och havet i kvällsljus" loading="lazy" width="1200" height="900">
+                <span class="portfolio-caption">Skog och hav i kvällsljus</span>
+            </a>
+        </div>
+        <div class="portfolio-more">
+            <button type="button" id="portfolio-more">Visa fler bilder <span>(43)</span></button>
         </div>
     </section>
 
@@ -1162,13 +1381,16 @@
     <script>
         // Portfolio lightbox
         (function () {
-            const items = Array.from(document.querySelectorAll('.portfolio-item'));
+            const all = Array.from(document.querySelectorAll('.portfolio-item'));
+            const visible = () => all.filter(el => !el.classList.contains('is-hidden'));
+            let items = visible();
             const box = document.getElementById('lightbox');
             const boxImg = document.getElementById('lightbox-img');
             const fullLink = document.getElementById('lightbox-full');
             let current = 0;
 
             function show(i) {
+                items = visible();
                 current = (i + items.length) % items.length;
                 const item = items[current];
                 const thumb = item.querySelector('img');
@@ -1185,12 +1407,23 @@
                 document.body.style.overflow = '';
             }
 
-            items.forEach((item, i) => {
+            all.forEach(item => {
                 item.addEventListener('click', e => {
                     e.preventDefault();
-                    show(i);
+                    show(visible().indexOf(item));
                 });
             });
+
+            const more = document.getElementById('portfolio-more');
+            if (more) {
+                more.addEventListener('click', () => {
+                    const hidden = all.filter(el => el.classList.contains('is-hidden'));
+                    hidden.slice(0, 12).forEach(el => el.classList.remove('is-hidden'));
+                    const left = hidden.length - 12;
+                    if (left <= 0) more.parentElement.remove();
+                    else more.querySelector('span').textContent = '(' + left + ')';
+                });
+            }
 
             document.getElementById('lightbox-close').addEventListener('click', close);
             document.getElementById('lightbox-prev').addEventListener('click', () => show(current - 1));
