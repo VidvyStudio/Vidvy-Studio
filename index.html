@@ -303,7 +303,7 @@
         }
 
         .service-media {
-            aspect-ratio: 4 / 3;
+            aspect-ratio: 1 / 1;
             overflow: hidden;
             border-radius: 2px;
             background: var(--accent);
@@ -315,11 +315,23 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: transform 0.8s ease;
         }
 
-        .service-card:hover .service-media img {
-            transform: scale(1.04);
+        .service-media.combo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 2.4fr 1fr;
+            gap: 4px;
+            background: transparent;
+        }
+
+        .service-media.combo img {
+            min-height: 0;
+            border-radius: 2px;
+        }
+
+        .service-media.combo img:first-child {
+            grid-column: 1 / span 2;
         }
 
         .service-card h3 {
@@ -416,15 +428,6 @@
             }
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            .service-media img {
-                transition: none;
-            }
-
-            .service-card:hover .service-media img {
-                transform: none;
-            }
-        }
 
         /* Process Section */
         .process-section {
@@ -1011,8 +1014,10 @@
         
         <div class="services-grid">
             <article class="service-card fade-in">
-                <div class="service-media">
-                    <img src="galleri-skargardsbat-liten.jpg" alt="Skärgårdsbåtar som lämnar kajen, fotograferade rakt ovanifrån" loading="lazy" width="1200" height="900">
+                <div class="service-media combo">
+                    <img src="galleri-skargardsbat-ovanifran-liten.jpg" alt="Blå skärgårdsbåt på mörkt vatten, fotograferad ovanifrån" loading="lazy" width="1200" height="900">
+                    <img src="galleri-farja-mellan-holmarna-liten.jpg" alt="Kryssningsfartyg mellan skogsklädda holmar i kvällsljus" loading="lazy" width="1200" height="675">
+                    <img src="galleri-birka-i-farleden-liten.jpg" alt="Kryssningsfartyget Birka i farleden" loading="lazy" width="1200" height="675">
                 </div>
                 <h3>Företag &amp; marknadsföring</h3>
                 <p>Film och bilder från luften till hemsidan, sociala medier och reklam – som visar er verksamhet från en ny vinkel.</p>
@@ -1026,8 +1031,10 @@
             </article>
 
             <article class="service-card fade-in">
-                <div class="service-media">
-                    <img src="galleri-villa-pa-berget-liten.jpg" alt="Villa på en bergssluttning med trädgård och terrasser, fotograferad från luften" loading="lazy" width="1200" height="900">
+                <div class="service-media combo">
+                    <img src="galleri-rott-tak-ovanifran-liten.jpg" alt="Hus med orange tegeltak, fotograferat rakt ovanifrån" loading="lazy" width="1200" height="675">
+                    <img src="galleri-villa-pa-berget-liten.jpg" alt="Villa på en bergssluttning med trädgård och terrasser" loading="lazy" width="1200" height="900">
+                    <img src="galleri-roda-hus-kvallsljus-liten.jpg" alt="Röda hus i kvällsljus vid skogskanten" loading="lazy" width="1200" height="900">
                 </div>
                 <h3>Fastigheter &amp; mäklare</h3>
                 <p>Flygfoto och film som visar fastigheten, tomten och omgivningen i sitt bästa ljus.</p>
@@ -1035,7 +1042,6 @@
                     <li>Flygfoto av hus och tomt</li>
                     <li>Kort film till annonsen</li>
                     <li>Visar läge och närområde</li>
-                    <li>DJI Mini 5 Pro (4K HDR)</li>
                 </ul>
                 <a class="service-link" href="#kontakt">Be om offert</a>
             </article>
@@ -1328,7 +1334,7 @@
             <div class="process-step fade-in">
                 <div class="step-number">03</div>
                 <h4>Produktion</h4>
-                <p>Vi filmar och fotograferar från luften i 4K. Allt hanteras med omsorg och precision.</p>
+                <p>Vi filmar och fotograferar från luften i 4K HDR. Allt hanteras med omsorg och precision.</p>
             </div>
 
             <div class="process-step fade-in">
@@ -1350,8 +1356,8 @@
 
             <div class="about-details">
                 <div class="about-detail">
-                    <h4>Utrustning</h4>
-                    <p>DJI Mini 5 Pro drönare med 4K HDR-inspelning.</p>
+                    <h4>Kvalitet</h4>
+                    <p>4K HDR är standard i allt vårt arbete.</p>
                 </div>
                 <div class="about-detail">
                     <h4>Plats</h4>
