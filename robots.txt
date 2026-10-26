@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vidvystudio.github.io/sitemap.xml
+Sitemap: https://vidvystudio.se/sitemap.xml
