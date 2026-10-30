@@ -657,6 +657,96 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
+        /* Contact form */
+        .contact-form {
+            max-width: 640px;
+            margin: 0 auto 1rem;
+            text-align: left;
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .contact-form h3 {
+            font-family: 'Instrument Serif', serif;
+            font-weight: 400;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+
+        .form-field label {
+            display: block;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-field input,
+        .form-field textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 2px;
+            padding: 0.9rem 1rem;
+            color: var(--white);
+            font: inherit;
+            font-size: 1rem;
+        }
+
+        .form-field textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-field input::placeholder,
+        .form-field textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--white);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .contact-form .cta-button {
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            justify-self: center;
+            margin-top: 0.5rem;
+        }
+
+        .contact-form .cta-button:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        .form-status {
+            text-align: center;
+            min-height: 1.5em;
+            font-weight: 500;
+        }
+
+        .form-honeypot {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Footer */
         footer {
             background: var(--black);
@@ -1478,7 +1568,29 @@
                 </div>
             </div>
 
-            
+            <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <h3>Skicka ett meddelande</h3>
+                <input type="hidden" name="access_key" value="bc8ef6cd-d827-45f1-a691-2eb28f411efa">
+                <input type="hidden" name="subject" value="Nytt meddelande via vidvystudio.se">
+                <input type="hidden" name="from_name" value="Vidvy Studio hemsida">
+                <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="cf-name">Namn</label>
+                        <input type="text" id="cf-name" name="name" autocomplete="name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">E-post</label>
+                        <input type="email" id="cf-email" name="email" autocomplete="email" required>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="cf-message">Meddelande</label>
+                    <textarea id="cf-message" name="message" placeholder="Berätta kort om ditt projekt" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Skicka</button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
         </div>
     </section>
 
@@ -1599,6 +1711,38 @@
         
         // Try to load the image
      
+    </script>
+    <script>
+        // Contact form (Web3Forms)
+        (function () {
+            var form = document.getElementById('contact-form');
+            if (!form) return;
+            var status = document.getElementById('form-status');
+            var button = form.querySelector('button[type="submit"]');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                button.disabled = true;
+                status.textContent = 'Skickar...';
+                fetch(form.action, {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(form)
+                })
+                .then(function (r) { return r.json(); })
+                .then(function (data) {
+                    if (data.success) {
+                        form.reset();
+                        status.textContent = 'Tack! Meddelandet är skickat, jag hör av mig snart.';
+                    } else {
+                        status.textContent = 'Något gick fel. Mejla gärna direkt till vidvystudio@gmail.com.';
+                    }
+                })
+                .catch(function () {
+                    status.textContent = 'Något gick fel. Mejla gärna direkt till vidvystudio@gmail.com.';
+                })
+                .then(function () { button.disabled = false; });
+            });
+        })();
     </script>
 </body>
 </html>
